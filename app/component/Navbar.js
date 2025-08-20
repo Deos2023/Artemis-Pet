@@ -54,7 +54,7 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav
         className={`w-full transition-all duration-300 ${
-          scrolled ? "bg-white shadow-md" : "bg-sky-50"
+          scrolled ? "bg-sky-50 shadow-md" : "bg-sky-50"
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
