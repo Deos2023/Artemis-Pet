@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Joti_One, Piedra } from "next/font/google"; // ✅ Import Joti One & Piedra
 import "./globals.css";
+import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -8,6 +11,20 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+// ✅ Joti One font
+const jotiOne = Joti_One({
+  variable: "--font-joti-one",
+  weight: "400", // Joti One only has 400
+  subsets: ["latin"],
+});
+
+// ✅ Piedra font
+const piedra = Piedra({
+  variable: "--font-piedra",
+  weight: "400", // Piedra also has only 400
   subsets: ["latin"],
 });
 
@@ -20,9 +37,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${geistSans.variable} 
+          ${geistMono.variable} 
+          ${jotiOne.variable} 
+          ${piedra.variable} 
+          antialiased
+        `}
+        style={{
+          fontFamily: "var(--font-joti-one)", // ✅ Default font
+        }}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
