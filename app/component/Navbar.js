@@ -79,7 +79,7 @@ export default function Navbar() {
             {/* <Link href="/blog" className="text-sky-900 hover:text-pink-500">Blog</Link> */}
             <Link href="/contact" className="text-sky-900 hover:text-pink-500">Contact</Link>
             <Link
-              href="/quote"
+              href="/contact"
               className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition"
             >
               Get Quote
